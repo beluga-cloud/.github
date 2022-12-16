@@ -1,0 +1,8 @@
+{
+  "name": "Label issues/PRs from sponsors",
+  "description": "Labels all issues and pull requests made by our sponsors.",
+  "iconName": "icon-tag",
+  "categories": [
+    "Automation"
+  ]
+}
