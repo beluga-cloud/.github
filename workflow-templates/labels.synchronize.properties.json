@@ -1,6 +1,6 @@
 {
-  "name": "Synchronize organisation labels",
-  "description": "Synchronizes all Belug-Apps organisation's labels defined inside `belug-apps/.github`.",
+  "name": "Synchronize Organisation Labels",
+  "description": "Synchronizes all Belug-Apps organisation's labels defined inside `belug-apps/.github`",
   "iconName": "icon-tag",
   "categories": [
     "Automation"

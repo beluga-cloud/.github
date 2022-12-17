@@ -1,6 +1,6 @@
 {
-  "name": "Stale issues/PRs",
-  "description": "Checks for stale issues and pull requests.",
+  "name": "Stale Issues/PRs",
+  "description": "Checks for stale issues and pull requests",
   "iconName": "icon-clock",
   "categories": [
     "Automation"
