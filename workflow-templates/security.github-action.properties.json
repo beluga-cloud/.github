@@ -3,6 +3,6 @@
   "description": "Security analysis for Github Action workflows",
   "iconName": "icon-shield",
   "categories": [
-    "Automation"
+    "Code scanning"
   ]
 }
