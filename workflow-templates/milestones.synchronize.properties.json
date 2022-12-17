@@ -1,0 +1,8 @@
+{
+  "name": "Synchronize Organisation Milestones",
+  "description": "Synchronizes all Belug-Apps organisation's milestones automatically",
+  "iconName": "icon-milestone",
+  "categories": [
+    "Automation"
+  ]
+}
