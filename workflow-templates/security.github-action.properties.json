@@ -1,0 +1,8 @@
+{
+  "name": "Github Action Analysis",
+  "description": "Security analysis for Github Action workflows.",
+  "iconName": "icon-shield",
+  "categories": [
+    "Automation"
+  ]
+}
