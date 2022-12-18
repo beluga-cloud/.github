@@ -65,7 +65,7 @@ jobs:
             curl --silent \
                 -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
                 https://api.github.com/orgs/${{ github.repository_owner }}/repos?per_page=100 \
-            | jq '[.[].full_name] | map(select(. != "belug-apps/${{ github.repository }}"))' --compact-output
+            | jq '[.[].full_name] | map(select(. != "${{ github.repository }}"))' --compact-output
           ) >> ${GITHUB_OUTPUT}
   trigger-sync-everywhere:
     name: Trigger synchronization on each '${{ github.repository_owner }}' repositories
@@ -86,12 +86,11 @@ jobs:
             gpg --decrypt --quiet --batch \
               --passphrase "${{ secrets.GPG_SECRET_SIGNING_PASSPHRASE }}" \
               --output - \
-              <(echo "${{ needs.app_auth.outputs.token }}" \ 
-            | base64 --decode
+              <(echo "${{ needs.app_auth.outputs.token }}" | base64 --decode)
           ) >> ${GITHUB_OUTPUT}
       - uses: peter-evans/repository-dispatch@26b39ed245ab8f31526069329e112ab2fb224588 # v2.1.1
         with:
-          client-payload: '{"milestones":${{needs.list-milestones.outputs.milestones}}}'
+          client-payload: '{"milestones":${{needs.list_milestones.outputs.milestones}}}'
           event-type: sync-milestones
           repository: ${{ matrix.repository }}
           token: ${{ steps.app_auth.outputs.token }}
